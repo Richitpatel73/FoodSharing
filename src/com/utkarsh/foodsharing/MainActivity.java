@@ -16,11 +16,22 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+<<<<<<< HEAD
+=======
+		
+>>>>>>> upstream/master
 
 		lvMain = (ListView) findViewById(R.id.lvMain);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1, items);
 		lvMain.setAdapter(adapter);
 
+<<<<<<< HEAD
+=======
+		
+
+	
+	startService(new Intent(getBaseContext(), JSON_Service.class));
+>>>>>>> upstream/master
 	}
 	
 	
