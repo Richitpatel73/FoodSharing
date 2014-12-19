@@ -53,10 +53,10 @@ public class SQLiteDatabase extends SQLiteOpenHelper {
 		return true;
 	}
 	
-	public ArrayList<String> getAllInfo(){
+	public ArrayList<String> getAllName(){
 		ArrayList<String> list = new ArrayList<String>();
 		android.database.sqlite.SQLiteDatabase db = this.getReadableDatabase();
-		Cursor res = db.rawQuery("select * from InfoTable", null);
+		Cursor res = db.rawQuery("select name from InfoTable", null);
 		res.moveToFirst();
 		while(res.isAfterLast() == false){
 			list.add(res.getString(res.getColumnIndex(COLUMN_NAME)));

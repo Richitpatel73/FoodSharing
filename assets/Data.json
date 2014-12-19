@@ -1,0 +1,157 @@
+{ "list" : [
+ {
+ 	Name:"Happy Home Orphanage Mission",
+ 	Address:"#359, Chikkasandra, Hesarghatta Main Road,T.Dasarahalli, Bangalore",
+ 	Pin:560067,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"09886725487",
+ 	Lat:"13.065389",
+ 	Lng:"77.510777"
+ 	},
+ 	{
+ 	Name:"Al Ameen Residential Schools",
+ 	Address:"Hoskote, Malur Road, Bangalore",
+ 	Pin:566114,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08027900484",
+ 	Lat:"13.068693",
+ 	Lng:"77.808845"
+ },
+ {
+ 	Name:"Abilashrayam",
+ 	Address:"373, 2nd Cross Muniswamappa Layout,Opp. Kodigehalli Railway Station,Kodigehalli, Sahakar Nagar, Bangalore",
+ 	Pin:560092,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"09008444443",
+ 	Lat:"13.062045",
+ 	Lng:"77.573261"
+ },
+ {
+ 	Name:"BOSCO Yuvodaya",
+ 	Address:"91,'B' Street,6th Cross Road,Behind Movie Land Theatre,Gandhinagar,Bangalore",
+ 	Pin:560009,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08022208476",
+ 	Lat:"12.979090",
+ 	Lng:"77.575321"
+ },
+ {
+ 	Name:"Anatha Shishu Sevashram",
+ 	Address:"14,2nd Cross,Wilson Garden, Bangalore",
+ 	Pin:560027,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08022236892",
+ 	Lat:"12.950317",
+ 	Lng:"77.593174"
+ },
+ {
+ 	Name:"Ashraya Child Haven",
+ 	Address:"Dinnur Main Road,Kauser Nagar,Dinnur,Ganganagar, Bangalore",
+ 	Pin:560032,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08023334515",
+ 	Lat:"13.022578",
+ 	Lng:"77.602100"
+ },
+ {
+ 	Name:"New Mighty Grace Charitable Trust",
+ 	Address:"35,244/1 Munivenkatappa Layout,Horamavu Main Road,Kalkere,Bangalore",
+ 	Pin:560043,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08032027340",
+ 	Lat:"13.019902",
+ 	Lng:"77.655659"
+ },
+ {
+ 	Name:"Seva Sadan",
+ 	Address:"14th Cross Road,Malleshwaram,Bangalore",
+ 	Pin:560003,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08023347830",
+ 	Lat:"13.004013",
+ 	Lng:"77.570000"
+ 	},
+ 	{
+ 	Name:"Nizam-Us-Sunnah",
+ 	Address:"9th Main Road,2nd Block Jayanagar East,Jayanagar Bangalore",
+ 	Pin:560011,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"09902600002",
+ 	Lat:"13.005518",
+ 	Lng:"77.584419"
+ },
+ {
+ 	Name:"Little Sisters of the Poor",
+ 	Address:"26, hosur Road,Richmond Road, Bangalore",
+ 	Pin:560025,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08022270273",
+ 	Lat:"12.961525",
+ 	Lng:"77.606392"
+ },
+ {
+ 	Name:"Holy Cross Student's Home",
+ 	Address:"45,Museum Road,Bangalore",
+ 	Pin:560025,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08025587462",
+ 	Lat:"12.972733",
+ 	Lng:"77.603302"
+ },
+ {
+ 	Name:"St Patricks Orphanage",
+ 	Address:"15 k, Brigade road, Bangalore",
+ 	Pin:560025,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08025590376",
+ 	Lat:"12.972733",
+ 	Lng:"77.607422"
+ },
+ {
+ 	Name:"Jnanashrama Home for Aged",
+ 	Address:"22/A,Mahatma Gandhi Road, Bangalore",
+ 	Pin:560001,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"08025584100",
+ 	Lat:"12.975577",
+ 	Lng:"77.606907"
+ },
+ {
+ 	Name:"Girls Orphanage & Old Age Home",
+ 	Address:"No. 125,1st k Block,Near navrang Theatre,Dr Rajkumar Road, Rajajinagar,Bangalore",
+ 	Pin:560010,
+ 	City:"Bangalore",
+ 	State:"Karnataka",
+ 	Country:"India",
+ 	Mobile:"09341494200",
+ 	Lat:"13.019902",
+ 	Lng:"77.655659"
+ }
+ ]
+ }
