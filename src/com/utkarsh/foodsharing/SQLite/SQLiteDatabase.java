@@ -5,15 +5,16 @@ import java.util.ArrayList;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteDatabase extends SQLiteOpenHelper {
-	
+
 	public static final String DATABASE_NAME = "FoodSharingDB.db";
 	public static final String TABLE_NAME = "InfoTable";
 	public static final String COLUMN_NAME = "name";
-	
+	public static final String COLUMN_LAT = "lat";
+	public static final String COLUMN_LNG = "lng";
+
 	public SQLiteDatabase(Context context) {
 		super(context, DATABASE_NAME, null, 1);
 		// TODO Auto-generated constructor stub
@@ -22,8 +23,8 @@ public class SQLiteDatabase extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(android.database.sqlite.SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-		db.execSQL("create table InfoTable " +
-		 "(_id integer primary key AUTOINCREMENT, name text,address text,city text,state text,country text,pincode integer, phone text,lat text,lng text)");
+		db.execSQL("create table InfoTable "
+				+ "(_id integer primary key AUTOINCREMENT, name text,address text,city text,state text,country text,pincode integer, phone text,lat text,lng text)");
 	}
 
 	@Override
@@ -32,10 +33,12 @@ public class SQLiteDatabase extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 		db.execSQL("DROP TABLE IF EXISTS InfoTable");
 		onCreate(db);
-		
+
 	}
-	
-	public boolean insertData(String name, String address, String city, String state, String country, int pincode, String phone, String lat, String lng ){
+
+	public boolean insertData(String name, String address, String city,
+			String state, String country, int pincode, String phone,
+			String lat, String lng) {
 		android.database.sqlite.SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues contentValues = new ContentValues();
 		contentValues.put("name", name);
@@ -47,23 +50,49 @@ public class SQLiteDatabase extends SQLiteOpenHelper {
 		contentValues.put("phone", phone);
 		contentValues.put("lat", lat);
 		contentValues.put("lng", lng);
-		
+
 		db.insert("InfoTable", null, contentValues);
-		
+
 		return true;
 	}
-	
-	public ArrayList<String> getAllName(){
+
+	public ArrayList<String> getAllName() {
 		ArrayList<String> list = new ArrayList<String>();
 		android.database.sqlite.SQLiteDatabase db = this.getReadableDatabase();
 		Cursor res = db.rawQuery("select name from InfoTable", null);
 		res.moveToFirst();
-		while(res.isAfterLast() == false){
+		while (res.isAfterLast() == false) {
 			list.add(res.getString(res.getColumnIndex(COLUMN_NAME)));
 			res.moveToNext();
 		}
 		return list;
-		
+
+	}
+
+	public ArrayList<String> getAllLat() {
+		ArrayList<String> list = new ArrayList<String>();
+		android.database.sqlite.SQLiteDatabase db = this.getReadableDatabase();
+		Cursor res = db.rawQuery("select lat from InfoTable", null);
+		res.moveToFirst();
+		while (res.isAfterLast() == false) {
+			list.add(res.getString(res.getColumnIndex(COLUMN_LAT)));
+			res.moveToNext();
+		}
+		return list;
+
+	}
+
+	public ArrayList<String> getAllLng() {
+		ArrayList<String> list = new ArrayList<String>();
+		android.database.sqlite.SQLiteDatabase db = this.getReadableDatabase();
+		Cursor res = db.rawQuery("select lng from InfoTable", null);
+		res.moveToFirst();
+		while (res.isAfterLast() == false) {
+			list.add(res.getString(res.getColumnIndex(COLUMN_LNG)));
+			res.moveToNext();
+		}
+		return list;
+
 	}
 
 }

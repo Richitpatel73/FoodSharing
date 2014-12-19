@@ -1,9 +1,7 @@
 package com.utkarsh.foodsharing;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
@@ -12,19 +10,17 @@ import org.json.JSONObject;
 
 import com.utkarsh.foodsharing.SQLite.SQLiteDatabase;
 
-import android.content.Context;
 import android.os.AsyncTask;
 
 public class FetchJSONTask extends AsyncTask<Void, Void, ArrayList<String>> {
-	
-	
-	
+
 	MainActivity context;
 	SQLiteDatabase db;
+
 	public FetchJSONTask(MainActivity context) {
-		
+
 		this.context = context;
-		
+
 	}
 
 	@Override
@@ -38,8 +34,8 @@ public class FetchJSONTask extends AsyncTask<Void, Void, ArrayList<String>> {
 			is.read(buffer);
 			is.close();
 			json = new String(buffer, "UTF-8");
-		    return parseJSON(json);
-			
+			return parseJSON(json);
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,13 +45,13 @@ public class FetchJSONTask extends AsyncTask<Void, Void, ArrayList<String>> {
 
 	private ArrayList<String> parseJSON(String data) {
 		ArrayList<String> list = new ArrayList<String>();
-		String name, address, city, state ,country, phone, lat, lng;
+		String name, address, city, state, country, phone, lat, lng;
 		int pincode;
 		try {
 			JSONObject obj = new JSONObject(data);
 			JSONArray dataArray = obj.getJSONArray("list");
 			JSONObject jsonData;
-			for(int i = 0; i < dataArray.length(); i++){
+			for (int i = 0; i < dataArray.length(); i++) {
 				jsonData = dataArray.getJSONObject(i);
 				name = jsonData.getString("Name");
 				address = jsonData.getString("Address");
@@ -66,25 +62,24 @@ public class FetchJSONTask extends AsyncTask<Void, Void, ArrayList<String>> {
 				lat = jsonData.getString("Lat");
 				lng = jsonData.getString("Lng");
 				pincode = jsonData.getInt("Pin");
-				if(db.insertData(name, address, city, state, country, pincode, phone, lat, lng)){
+				if (db.insertData(name, address, city, state, country, pincode,
+						phone, lat, lng)) {
 					list = db.getAllName();
 				}
-				
-				
-				
+
 			}
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return list;
-		
+
 	}
-	
+
 	@Override
 	protected void onPostExecute(ArrayList<String> result) {
 		// TODO Auto-generated method stub
-		
+
 		context.setArrayList(result);
 	}
 
