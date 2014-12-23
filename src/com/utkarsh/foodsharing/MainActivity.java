@@ -6,6 +6,7 @@ import com.utkarsh.foodsharing.SQLite.SQLiteDatabase;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,13 +19,15 @@ public class MainActivity extends Activity {
 	private ListView lvMain;
 	private static final String LAT_KEY = "lat";
 	private static final String LNG_KEY = "lng";
+	
 	SQLiteDatabase db;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		new FetchJSONTask(this).execute();
 		db = new SQLiteDatabase(getBaseContext());
 		lvMain = (ListView) findViewById(R.id.lvMain);
@@ -50,5 +53,7 @@ public class MainActivity extends Activity {
 		lvMain.setAdapter(adapter);
 
 	}
+	
+	
 
 }
