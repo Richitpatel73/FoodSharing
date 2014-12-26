@@ -34,8 +34,7 @@ public class FoodLocation extends Activity {
 				Double.parseDouble(intent.getStringExtra("lng")));
 		Marker marker = map.addMarker(new MarkerOptions().position(position)
 				.title("Orphanage"));
-		marker.setIcon(BitmapDescriptorFactory
-				.fromResource(R.drawable.ic_launcher));
+		marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher));
 		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 		map.setMyLocationEnabled(true);
 		myLocation = map.getMyLocation();
