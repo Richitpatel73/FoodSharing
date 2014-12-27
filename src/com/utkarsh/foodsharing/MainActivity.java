@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,12 +27,15 @@ public class MainActivity extends Activity {
 	private ListView lvMain;
 	private static final String LAT_KEY = "lat";
 	private static final String LNG_KEY = "lng";
+	
 	SQLiteDatabase db;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 		// creating connection detector class instance
 		cd = new ConnectionDetector(getApplicationContext());
 		// get Internet status
@@ -45,6 +49,13 @@ public class MainActivity extends Activity {
 					+"\n"+ "Enable it & restart the app.", false);
 
 		} else {
+=======
+		
+		new FetchJSONTask(this).execute();
+		db = new SQLiteDatabase(getBaseContext());
+		lvMain = (ListView) findViewById(R.id.lvMain);
+		lvMain.setOnItemClickListener(new OnItemClickListener() {
+>>>>>>> upstream/master
 
 			new FetchJSONTask(this).execute();
 			db = new SQLiteDatabase(getBaseContext());
@@ -109,5 +120,7 @@ public class MainActivity extends Activity {
 		lvMain.setAdapter(adapter);
 
 	}
+	
+	
 
 }
